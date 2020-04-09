@@ -24,3 +24,11 @@ docker run -d \
   --volume YOUR_SHARED_VOLUME:/etc/autossl \
   autossl:latest
 ```
+
+The certifcate and chain will be saved at: `/etc/letsencrypt/live/www.yourdomain.com/fullchain.pem`
+
+The key file will be saved at: `/etc/letsencrypt/live/www.yourdomain.com/privkey.pem`
+
+The account credentials will be saved at: `/etc/letsencrypt`
+
+The certificate you be auto renew.
