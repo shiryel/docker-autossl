@@ -11,9 +11,9 @@ Use the YOUR_SHARED_VOLUME to get the .pem and .cert from this container!
 ```
 # Build the docker file
 docker build \
-  -t autossl:latest \
-  -e DOMAINS=www.yourdomain.com \
-  -e EMAIL=your@email.com \
+  --tag autossl:latest \
+  --build-arg DOMAINS=www.yourdomain.com \
+  --build-arg EMAIL=your@email.com \
   .
 
 # Start the docker
@@ -21,6 +21,6 @@ docker run -d \
   --name autossl \
   --volume YOUR_SHARED_VOLUME:/etc/autossl \
   --restart unless-stopped \
-  -p 80:80 \
+  --publish 80:80 \
   autossl:latest
 ```
