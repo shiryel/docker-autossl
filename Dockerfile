@@ -1,7 +1,7 @@
 FROM alpine:latest
   
-ENV DOMAINS=www.example.com
-ENV EMAIL=your@email.com
+ARG DOMAINS=www.example.com
+ARG EMAIL=your@email.com
 
 RUN apk update
 RUN apk add --no-cache certbot
