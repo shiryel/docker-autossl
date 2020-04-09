@@ -21,7 +21,7 @@ docker run -d \
   --publish 80:80 \
   --env DOMAINS=www.yourdomain.com \
   --env EMAIL=your@email.com \
-  --volume YOUR_SHARED_VOLUME:/etc/autossl \
+  --volume YOUR_SHARED_VOLUME:/etc/letsencrypt/live \
   autossl:latest
 ```
 
@@ -32,3 +32,5 @@ The key file will be saved at: `/etc/letsencrypt/live/www.yourdomain.com/privkey
 The account credentials will be saved at: `/etc/letsencrypt`
 
 The certificate you be auto renew.
+
+Keep in mind that (re)running this container more than 5 times per day will cause a temporaly error due to https://letsencrypt.org/ rules
