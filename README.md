@@ -25,7 +25,7 @@ docker run -d \
   autossl:latest
 ```
 
-The certifcate and chain will be saved at: `/etc/letsencrypt/live/www.yourdomain.com/fullchain.pem`
+The certifcate and chain will be saved at: `/etc/letsencrypt/live/www.yourdomain.com/cert.pem`
 
 The key file will be saved at: `/etc/letsencrypt/live/www.yourdomain.com/privkey.pem`
 
