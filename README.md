@@ -21,7 +21,7 @@ docker run -d \
   --publish 80:80 \
   --env DOMAINS=www.yourdomain.com \
   --env EMAIL=your@email.com \
-  --volume YOUR_SHARED_VOLUME:/etc/letsencrypt/live \
+  --volume YOUR_SHARED_VOLUME:/etc/letsencrypt \
   autossl:latest
 ```
 
